@@ -9,22 +9,12 @@
 
     SYSCFG_DL_init();
 
-    uint8_t dats[] = "aaa\n";
-
-
     while (1){
 
         DL_GPIO_togglePins(GPIO_GRP_0_PORT, GPIO_GRP_0_LD0_PIN);
-
-        printf("Test:%-5.3f\n",-1.78513f);
-
-
-//        for (volatile uint32_t i = 0; i < 100000; i++) {
-//            __NOP();  // 可选，防止优化
-//        }
+        printf("Hello World\n");
 
         Delay_tick(500);
-
     }
 
 }

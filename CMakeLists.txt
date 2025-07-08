@@ -31,7 +31,7 @@ add_executable(${PROJECT_NAME}.elf
 
 target_link_libraries(${PROJECT_NAME}.elf
         ${CMAKE_SOURCE_DIR}/Lib/driverlib.a
-
+        ${CMAKE_SOURCE_DIR}/Lib/arm_cortexM0l_math.a
 )
 
 

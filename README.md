@@ -29,9 +29,9 @@ MSPM0G3507_tmplate/
 │   ├── ti_msp_dl_config.c          # 外设初始化代码
 │   └── ti_msp_dl_config.h          # 外设初始化头文件
 │
-├── ti/                       # TI SDK 源文件（当前未启用）
-│   └── devices/
-│       └── driverlib/              # TI DriverLib 源码（可选编译使用）
+├── ti/                       # TI SDK 提供的文件
+│   ├── devices/
+│   └── driverlib/                  # TI DriverLib
 │
 ├── User/                     # 用户代码
 │   ├── Inc/                        # 自定义头文件
@@ -90,12 +90,11 @@ MSPM0G3507_tmplate/
 
     ```
 ## 常见问题
-- #### 无法命中断点：确认 -g 选项已启用并烧录了最新 .elf 文件。
-    PyOCD 无法识别器件：
+  - #### PyOCD 无法识别器件：
     确认已安装 CMSIS-Pack
-    ```bash
-    pyocd pack install TexasInstruments.MSPM0G_DFP
-    ```
+      ```bash
+      pyocd pack install TexasInstruments.MSPM0G_DFP
+      ```
 ## 参考资源
 - [MSPM0G3507 Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 - [MSPM0 SDK](https://www.ti.com/tool/MSPM0-SDK)

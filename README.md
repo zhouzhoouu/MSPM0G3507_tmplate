@@ -59,7 +59,7 @@ MSPM0G3507_tmplate/
 ## 烧录与调试
 - #### 使用 PyOCD 烧录
     ```bash
-    pyocd flash build/MSPM0G3507_Blink.elf
+    pyocd flash build/MSPM0G3507_Tmplate.elf
     ```
 - #### 启动 GDB 调试服务器
     ```bash

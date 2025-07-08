@@ -68,18 +68,26 @@ MSPM0G3507_tmplate/
     CLion 中可配置 GDB Debug，路径选择 arm-none-eabi-gdb，并连接到 3333 端口。
 
 ## 示例功能
-- 本模板已实现基本 LED 闪烁功能，代码位于：
+- 本模板已实现基本 LED 闪烁功能，并通过串口发送字符，代码位于：
 
     ```c
     // User/Src/main.c
 
-    int main(void) {
-        SYSCFG_DL_init();                // 调用 SysConfig 生成的初始化代码
-        while (1) {
-            DL_GPIO_togglePins(GPIOB, DL_GPIO_PIN_22);
-            delay_loop();                // 简易延时函数
+    
+    int main(void){
+  
+        SYSCFG_DL_init();
+    
+        while (1){
+    
+            DL_GPIO_togglePins(GPIO_GRP_0_PORT, GPIO_GRP_0_LD0_PIN);
+            printf("Hello World\n");
+    
+            Delay_tick(500);
         }
+    
     }
+
     ```
 ## 常见问题
 - #### 无法命中断点：确认 -g 选项已启用并烧录了最新 .elf 文件。

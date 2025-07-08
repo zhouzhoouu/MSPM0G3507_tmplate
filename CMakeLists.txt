@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 
 include("cmake/gcc-arm-none-eabi.cmake")
 
-project(MSPM0G3507_Blink C)
+project(MSPM0G3507_Tmplate C)
 
 # 设置交叉编译工具链
 # 编译选项

@@ -1,7 +1,7 @@
 #include "main.h"
 #include "arm_math.h"
 #include "ti_msp_dl_config.h"
-
+#include "delay.h"
 #include "stdio.h"
 
 
@@ -18,9 +18,12 @@
 
         printf("Test:%-5.3f\n",-1.78513f);
 
-        for (volatile uint32_t i = 0; i < 1000000; i++) {
-            __NOP();  // 可选，防止优化
-        }
+
+//        for (volatile uint32_t i = 0; i < 100000; i++) {
+//            __NOP();  // 可选，防止优化
+//        }
+
+        Delay_tick(500);
 
     }
 
